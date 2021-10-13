@@ -1,0 +1,45 @@
+/*=============== HEADER ===============*/
+#hedaer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    transition: background-color .4s;
+    z-index: 100;
+
+    .logo {
+        background: url(../images/logo_wh.png) no-repeat center/cover;
+        width: 3rem;
+        height: 3rem;
+        margin: 0;
+        opacity: 0;
+        -webkit-animation: moveDown 1.2s forwards;
+        animation: moveDown 1.2s forwards;
+    }
+
+    a {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .menu {
+        display: flex;
+
+        li {
+            margin-left: 2rem;
+            opacity: 0;
+            -webkit-animation: moveDown 1.2s forwards;
+            animation: moveDown 1.2s forwards;
+
+            @for $i from 1 through 6 {
+                &:nth-of-type(#{$i}) {
+                    -webkit-animation-delay: (0.1s * $i);
+                    animation-delay: (0.1s * $i);
+                }
+            }
+        }
+    }
+}

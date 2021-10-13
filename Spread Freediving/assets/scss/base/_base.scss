@@ -1,0 +1,102 @@
+/*=============== BASE ===============*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    word-break: keep-all;
+    overflow-x: hidden;
+    font: 1.8vh/1.5 'NanumSquare', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+li, a, span {
+    color: var(--color-white);
+}
+
+p {
+    color: white;
+    margin: .5rem 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-white);
+}
+
+h1, h2 {
+    font-size: 40px;
+}
+
+h1 {
+    font-family: 'NanumSquare', sans-serif;
+    margin-bottom: var(--mb-1-5);
+}
+
+section:not(.intro) h1 {
+    font-size: 4vh
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    font: normal 1.2vh/1 'Michroma', sans-serif;
+    color: var(--color-white);
+    background: transparent url(../images/bg_liquid_fill.png) repeat-x 0 -160%;
+    border: 1px solid white;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: 1.5s ease;
+}
+
+button:hover {
+    background-position: 500% 100%;
+    color: var(--color-navy);
+}
+
+.color-coral {
+    color: var(--color-coral);
+}
+
+.color-bluegreen {
+    color: var(--color-bluegreen);
+}
+
+.color-navy {
+    color: var(--color-navy);
+}
+
+.color-blue {
+    color: var(--color-blue);
+}
+
+.color-lavender {
+    color: var(--color-lavender);
+}
+
+.color-babypink {
+    color: var(--color-babypink);
+}
+
+.h {
+    position: absolute;
+    top: -9999px;
+    opacity: 0;
+}

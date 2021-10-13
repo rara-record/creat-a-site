@@ -1,0 +1,110 @@
+/*=============== INTRO ===============*/
+#intro {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    .title {
+        position: absolute;
+        top: 30%;
+        left: 15%;
+
+        h1 {
+            font: var(--font-black) 10vh/1 'Cinzel Decorative', cursive;
+            margin-bottom: var(--mb-0-5);
+            overflow: hidden;
+            text-transform: uppercase;
+
+            span {
+                display: block;
+                opacity: 0;
+                -webkit-animation: moveUp .8s forwards .2s;
+                animation: moveUp .8s forwards .2s;
+            }
+        }
+
+        h2 {
+            font: var(--font-normal) 3vh/1 'Poppins', cursive;
+            margin-bottom: var(--mb-2);
+            letter-spacing: 1.3vh;
+            text-transform: uppercase;
+
+            span {
+                display: block;
+                opacity: 0;
+                -webkit-animation: moveUp .8s forwards .5s;
+                animation: moveUp .8s forwards .5s;
+            }
+        }
+
+        p {
+            opacity: 0;
+            -webkit-animation: moveRight .8s forwards .8s;
+            animation: moveRight .8s forwards .8s;
+        }
+
+        button {
+            opacity: 0;
+            -webkit-animation: moveSmallUp .8s forwards .8s;
+            animation: moveSmallUp .8s forwards .8s;
+            margin-top: 2rem;
+            margin-bottom: 0;
+        }
+    }
+
+    .media {
+        z-index: 10;
+        position: absolute;
+        left: 2rem;
+        bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+
+        li {
+            margin-top: 1rem;
+            opacity: 0;
+            -webkit-animation: moveSmallUp 1.2s forwards;
+            animation: moveSmallUp 1.2s forwards;
+
+
+            @for $i from 1 through 3 {
+                &:nth-of-type(#{$i}) {
+                    -webkit-animation-delay: (0.2s * $i) + 0.5s;
+                    animation-delay: (0.2s * $i) + 0.5s;
+                }
+            }
+        }
+    }
+
+    .scroll-downs {
+        position: absolute;
+        left: 50%;
+        bottom: 3rem;
+        transform: translateX(-50%);
+        width: 34px;
+        height: 55px;
+        margin: auto;
+        opacity: 0;
+        -webkit-animation: appear 1.2s forwards 1s;
+        animation: appear 1.2s forwards 1s;
+
+        .mouse {
+            width: 3px;
+            height: 35px;
+            padding: 10px 15px;
+            border: 2px solid #fff;
+            border-radius: 25px;
+            box-sizing: content-box;
+            opacity: 0.75;
+
+            .scroller {
+                width: 3px;
+                height: 10px;
+                border-radius: 25%;
+                background-color: #fff;
+                -webkit-animation: scroll 2.2s cubic-bezier(.15, .41, .69, .94) infinite;
+                animation: scroll 2.2s cubic-bezier(.15, .41, .69, .94) infinite;
+            }
+        }
+    }
+}

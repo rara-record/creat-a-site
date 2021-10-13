@@ -1,0 +1,50 @@
+/*=============== ABOUT ===============*/
+#about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 10vw 5rem;
+    z-index: 2;
+
+    .description {
+        position: relative;
+        margin: -20% 0 0 30%;
+        padding: 10% 0 0 3rem;
+        word-break: keep-all;
+        color: rgba(255, 255, 255, 1);
+
+        &::before {
+            content: '\201C';
+            position: absolute;
+            bottom: -10rem;
+            left: -5rem;
+            font: normal 15vw/1 'Libre Baskerville', serif;
+            color: rgba(88, 124, 188, .1);
+        }
+
+        &::after {
+            content: '\201D';
+            position: absolute;
+            top: 5rem;
+            right: -5rem;
+            font: normal 15vw/1 'Libre Baskerville', serif;
+            color: rgba(88, 124, 188, .1);
+        }
+    }
+
+    .inner-wrap {
+        width: 50vw;
+        height: 50vh;
+        min-width: 600px;
+        min-height: 350px;
+        margin: 3rem 0 0 10%;
+    }
+
+    &::before {
+        content: 'What is Freediving?';
+        max-width: 70vw;
+        font: normal 8vw/1.2 'Libre Baskerville', serif;
+        color: rgba(88, 124, 188, .3);
+        text-align: left;
+    }
+}
